@@ -34,9 +34,13 @@ The company's data is stored across **four** key tables, which are used to measu
 * **Users:** This table holds geographic and some demographic information about every customer the company has ever had.
     * **Number of Records:** **100,000**
 
+![ERD](https://github.com/AIK-01/Data-Analysis/blob/main/Project-1%20-%3E%20Ecommerce%20Performance%20Analysis/Others/Images/ERD.png)
+
 ---
 
 ## Executive Summary
+
+![Main KPI Dashboard](https://github.com/AIK-01/Data-Analysis/blob/main/Project-1%20-%3E%20Ecommerce%20Performance%20Analysis/Others/Images/KPI%20Dashboard.png)
 
 For the majority of the period analyzed, the company consistently attracted around **1,150** new users each month. However, a significant spike occurred in May **2025**, when the company gained over **3,100** new users. Notably, **70%** of these new users came from the 'Search' traffic source. This presents an opportunity for the operating team to investigate what caused this exceptional increase and learn how to attract more users. The company has been very effective at turning new users into paying customers, which has led to a major increase in both new buyers and total buyers since **2024**.
 
@@ -66,13 +70,13 @@ All **three** of these metrics were calculated by combining sales records from t
 
 As mentioned in the executive summary, the company has stabilized its profit margin at about **50%**. A simple **20%** increase in the sale price of all products could have raised the profit margin to **60%**. A price increase of this magnitude could have resulted in total revenue exceeding **$20M**, and net profit could have been as high as **$12M**. This shows the significant growth that could be achieved by making a small change to product pricing. The company has not changed its product prices since its beginning, even though the economy has fluctuated. The fact that both retail prices and product costs have remained steady gives the company a great opportunity to grow by creating a better sales strategy. For this reason, I believe that increasing product prices to boost the bottom line is a smart move for the operating team to consider. The table below shows a yearly comparison of the current revenue and profit against a **20%** increase in the products.
 
-![Annual Comparison of Revenue and Profit with a 20% Increase]()
+![Annual Comparison of Revenue and Profit with a 20% Increase](https://github.com/AIK-01/Data-Analysis/blob/main/Project-1%20-%3E%20Ecommerce%20Performance%20Analysis/Others/Images/Annual%20Comparison%20of%20CRP.png)
 
 ### Sales Volume
 
 The company is successfully converting customer interest into more sales. The trends for total buyers and sales volume look nearly identical, which shows that more buyers lead to a greater quantity of sales. Therefore, the company needs to not only understand how to attract more customers but also how to keep them. The company should also plan better marketing campaigns to hold the attention of its customer base. The table below displays the company's annual sales volume and the growth rate compared to previous years.
 
-![Annual Sales Volume and Growth Rate]()
+![Annual Sales Volume and Growth Rate](https://github.com/AIK-01/Data-Analysis/blob/main/Project-1%20-%3E%20Ecommerce%20Performance%20Analysis/Others/Images/Annual%20Sales%20Volume%20%26%20GR.png)
 
 ### Average Order Value (AOV)
 
@@ -80,7 +84,7 @@ To calculate the AOV, we need the total value of all transactions for a given pe
 
 The AOV presented in the main dashboard is based only on the `Ordered Items` table. To include the records from the `Inventory Items` table, we can make an assumption that every order contains **two** items. With this assumption, the number of orders from the `Inventory Items` table would be the number of records divided by **two**. When we combine both tables to calculate a new, "combined" AOV, the results are quite different.
 
-![Comparison of AOV calculations with and without combined data]()
+![Comparison of AOV calculations with and without combined data](https://github.com/AIK-01/Data-Analysis/blob/main/Project-1%20-%3E%20Ecommerce%20Performance%20Analysis/Others/Images/ComparedAOV.png)
 
 As you can see, the average difference between the two calculations is **$16.61**, which is a significant difference for this metric. The combined AOV has been consistently between **$99** and **$110** since June **2021**. This suggests that the company's true AOV is likely closer to **$100**.
 
