@@ -34,7 +34,11 @@ The company's data is stored across **four** key tables, which are used to measu
 * **Users:** This table holds geographic and some demographic information about every customer the company has ever had.
     * **Number of Records:** **100,000**
 
-![ERD](https://github.com/AIK-01/Data-Analysis/blob/main/Project-1%20-%3E%20Ecommerce%20Performance%20Analysis/Others/Images/ERD.png)
+<p align="center">
+<img  height="520" width="720"
+   src="https://github.com/AIK-01/Data-Analysis/blob/main/Project-1%20-%3E%20Ecommerce%20Performance%20Analysis/Others/Images/ERD.png" 
+   alt="ERD"> 
+</p>
 
 ---
 
@@ -66,33 +70,39 @@ A potential way to account for this missing data is to assume that each order in
 
 ### Total Revenue, Profit, and Cost
 
-All **three** of these metrics were calculated by combining sales records from the `Inventory Items` and `Ordered Items` tables. Unlike the customer acquisition metric, there are no missing data issues for these calculations. This means the numbers shown in the KPI dashboard for these **three** metrics are accurate. Revenue was calculated by adding up the `retail_price` of all sold products. Cost was calculated by adding up the values in the `cost` column, and Profit was calculated by subtracting the total cost from the total revenue. The company achieved its first Million Dollar Revenue per month in May **2025**. The company's total (Net) Revenue is **$16.7M**, and its total (Net) Profit is **$8.67M**.
+All **three** of these metrics were calculated by combining sales records from the `Inventory Items` and `Ordered Items` tables. Unlike the **customer acquisition** metric, there are no missing data issues for these calculations. This means the numbers shown in the **KPI**  dashboard for these **three** metrics are accurate. **Revenue** was calculated by adding up the `retail_price` of all sold products. **Cost** was calculated by adding up the values in the `cost` column, and **Profit** was calculated by subtracting the total cost from the total revenue. The company achieved its first **Million-Dollar** revenue per month in May **2025**. The company's total (Net) Revenue is **$16.7M**, and its total (Net) Profit is **$8.67M**.
 
-As mentioned in the executive summary, the company has stabilized its profit margin at about **50%**. A simple **20%** increase in the sale price of all products could have raised the profit margin to **60%**. A price increase of this magnitude could have resulted in total revenue exceeding **$20M**, and net profit could have been as high as **$12M**. This shows the significant growth that could be achieved by making a small change to product pricing. The company has not changed its product prices since its beginning, even though the economy has fluctuated. The fact that both retail prices and product costs have remained steady gives the company a great opportunity to grow by creating a better sales strategy. For this reason, I believe that increasing product prices to boost the bottom line is a smart move for the operating team to consider. The table below shows a yearly comparison of the current revenue and profit against a **20%** increase in the products.
+As mentioned in the executive summary, the company has stabilized its profit margin at about **50%**. A simple **20%** increase in the sale price of all products could have raised the profit margin to **60%**. A price increase of this magnitude could have resulted in **total revenue** exceeding **$20M**, and **net profit** could have been as high as **$12M**. This shows the significant growth that could be achieved by making a small change to **product pricing**. The company has not changed its product prices since its beginning, even though the economy has fluctuated. The fact that both retail prices and product costs have remained steady gives the company a great opportunity to grow by creating a better sales strategy. For this reason, I believe that increasing product prices to boost the bottom line is a smart move for the operating team to consider. The table below shows a yearly comparison of the current revenue and profit against a **20%** increase in the product prices.
 
-![Annual Comparison of Revenue and Profit with a 20% Increase](https://github.com/AIK-01/Data-Analysis/blob/main/Project-1%20-%3E%20Ecommerce%20Performance%20Analysis/Others/Images/Annual%20Comparison%20of%20CRP.png)
+<img  height="400" width="520"
+   src="https://github.com/AIK-01/Data-Analysis/blob/main/Project-1%20-%3E%20Ecommerce%20Performance%20Analysis/Others/Images/Annual%20Comparison%20of%20CRP.png" 
+   alt="Annual Comparison of Revenue and Profit with a 20% Increase">
 
 ### Sales Volume
 
-The company is successfully converting customer interest into more sales. The trends for total buyers and sales volume look nearly identical, which shows that more buyers lead to a greater quantity of sales. Therefore, the company needs to not only understand how to attract more customers but also how to keep them. The company should also plan better marketing campaigns to hold the attention of its customer base. The table below displays the company's annual sales volume and the growth rate compared to previous years.
+The company is successfully converting customer interest into more sales. The trends for **total buyers** and **sales volume** look nearly identical, which shows that more buyers lead to a greater quantity of sales. Therefore, the company needs to not only understand how to attract more customers but also how to keep them. The company should also plan better marketing campaigns to hold the attention of its customer base. The table below displays the company's annual sales volume and the growth rate compared to previous years.
 
-![Annual Sales Volume and Growth Rate](https://github.com/AIK-01/Data-Analysis/blob/main/Project-1%20-%3E%20Ecommerce%20Performance%20Analysis/Others/Images/Annual%20Sales%20Volume%20%26%20GR.png)
+<img  height="250"
+   src="https://github.com/AIK-01/Data-Analysis/blob/main/Project-1%20-%3E%20Ecommerce%20Performance%20Analysis/Others/Images/Annual%20Sales%20Volume%20%26%20GR.png" 
+   alt="Annual Sales Volume and Growth Rate">
+
+_N.B._ **2025** shows a negative growth because it doesn't contain the data for the whole year. As mentioned throughout the project, the data includes the records from January 2019 to June 2025. 
 
 ### Average Order Value (AOV)
 
-To calculate the AOV, we need the total value of all transactions for a given period and the number of orders in that same time frame. To identify each unique order, we need a unique `order_id` connected to the sales records. However, similar to the customer acquisition data, there is a lack of data for AOV. While the `Ordered Items` table includes the `order_id`, the `Inventory Items` table does not. This means most of the sales records are missing a way to track the order they belong to.
+To calculate the **AOV**, we need the total value of all **transactions** for a given period and the number of **orders** in that same time frame. To identify each unique order, we need a unique `order_id` connected to the sales records. However, similar to the customer acquisition data, there is a lack of data for **AOV**. While the `Ordered Items` table includes the `order_id`, the `Inventory Items` table does not. This means most of the sales records are missing a way to track the order they belong to.
 
-The AOV presented in the main dashboard is based only on the `Ordered Items` table. To include the records from the `Inventory Items` table, we can make an assumption that every order contains **two** items. With this assumption, the number of orders from the `Inventory Items` table would be the number of records divided by **two**. When we combine both tables to calculate a new, "combined" AOV, the results are quite different.
+The **AOV** presented in the main **KPI** dashboard is based only on the `Ordered Items` table. To include the records from the `Inventory Items` table, we can make an assumption that every order contains **2** items. With this assumption, the number of orders from the `Inventory Items` table would be the number of records divided by **2**. When we combine both tables to calculate a new, "combined" **AOV**, the results are quite different.
 
 ![Comparison of AOV calculations with and without combined data](https://github.com/AIK-01/Data-Analysis/blob/main/Project-1%20-%3E%20Ecommerce%20Performance%20Analysis/Others/Images/ComparedAOV.png)
 
-As you can see, the average difference between the two calculations is **$16.61**, which is a significant difference for this metric. The combined AOV has been consistently between **$99** and **$110** since June **2021**. This suggests that the company's true AOV is likely closer to **$100**.
+As we can see, the average difference between the two calculations is **$16.61 ($103.71 - $87.10)**, which is a significant difference for this metric. The combined **AOV** has been consistently between **$99** and **$110** since June **2021**. This suggests that the company's true **AOV** is likely around **$100**.
 
 ---
 
 ## Recommendations
 
-Based on our analysis of the company's performance, here are some key recommendations for the operating and data teams:
+Based on our analysis of the company's performance, here are some **key recommendations** for the operating and data teams:
 
 ### For the Operating Team
 
@@ -102,4 +112,4 @@ Based on our analysis of the company's performance, here are some key recommenda
 
 ### For the Data Team
 
-* **Improve Data Quality:** It's crucial to get a more accurate picture of our customers and sales. We need to work on a solution to connect user IDs to all sales records, especially in the `Inventory Items` table. This will give us a much better understanding of our actual customer base and the true Average Order Value.
+* **Improve Data Quality:** It's crucial to get a more accurate picture of our customers and sales. We need to work on a solution to connect **user IDs** & **order IDs** to all sales records, especially in the `Inventory Items` table. This will give us a much better understanding of our actual customer base and the true Average Order Value, as well as some other key business metrics.
