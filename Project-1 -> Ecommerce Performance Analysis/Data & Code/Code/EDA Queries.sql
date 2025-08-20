@@ -1,3 +1,5 @@
+-- EDA Queries
+
 -- COUNTING TOTAL RECORDS --
 -- --------------------------------------------------
 SELECT COUNT(DISTINCT inventory_item_id) AS cnt /* {ordered items} contains | 181,038 | records. */
