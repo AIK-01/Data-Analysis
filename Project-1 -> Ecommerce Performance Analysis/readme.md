@@ -1,8 +1,8 @@
-# The Look: E-commerce Performance Analysis (2019-2025)
+# The Look: E-commerce Performance Analysis (2019–2025)
 
 **Table of Contents**
-
 - [Project Overview](#project-overview)
+- [Analytics Tools](#analytics-tools)
 - [Data Structure Overview](#data-structure-overview)
 - [Executive Summary](#executive-summary)
 - [Insights Deep Dive](#insights-deep-dive)
@@ -12,27 +12,44 @@
 
 ## Project Overview
 
-"The Look" is an e-commerce company that began its operations in **2018**, specializing in various clothing and accessories for both men and women. This project was initiated at the request of the company owner to conduct a thorough analysis of the store's performance. The primary goals of this analysis are to determine the overall business growth rate and to identify any specific areas that the operating team should focus on.
+**The Look** is an e-commerce company launched in **2018**, specializing in clothing and accessories for men and women. This project was conducted at the request of the company owner to evaluate overall performance and identify growth opportunities.  
 
-This report is based on all historical data from **2019** through **2025**. I have analyzed key performance indicators (KPIs) such as customer acquisition, sales volume, sales revenue, and average order value (AOV). The aim is to understand the company's performance, identify opportunities for improvement, and generate more revenue and profit. In addition, I will provide recommendations for the data team to improve data quality, which will help the company make better, more informed decisions in the future.
+The primary objectives were to:  
+- Assess **business growth** over time.  
+- Evaluate **customer acquisition, sales volume, revenue, profit, and average order value (AOV)**.  
+- Identify areas requiring strategic focus.  
+- Recommend steps to improve both **business operations** and **data quality**.  
+
+The analysis covers historical records from **2019 through mid-2025** and provides data-driven recommendations to support revenue growth and profitability.
+
+---
+
+## Analytics Tools
+
+To complete this analysis, the following tools were used:  
+
+- **MySQL (DBMS):** Data extraction, querying, KPI calculation, **exploratory data analysis (EDA)**, and **scenario modeling**.  
+- **OpenRefine:** Data cleaning and standardization across large datasets.  
+- **Excel / Google Sheets:** **Yearly aggregations and summary tables** used for documentation.  
+- **Tableau:** Dashboard creation and visualization of KPIs, trends, and insights.  
 
 ---
 
 ## Data Structure Overview
 
-The company's data is stored across **four** key tables, which are used to measure the different performance indicators.
+The company’s operational data is stored in **four key tables**:
 
-* **Inventory Items:** This table contains information on every product the company has ever owned. It includes the date a product was sold, details about the product itself, and the warehouse number it was shipped from.
-    * **Number of Records:** **490,910**
+* **Inventory Items:** Product-level sales records with details of sold items, sale dates, and warehouse numbers.  
+    * Records: **490,910**
 
-* **Ordered Items:** This table has details about individual products that customers ordered. It also includes various dates related to the product's journey through the supply chain.
-    * **Number of Records:** **181,038**
+* **Ordered Items:** Details of products ordered by customers, including supply chain dates.  
+    * Records: **181,038**
 
-* **Orders:** This table is used to uniquely identify each order placed. It contains different dates corresponding to the stages of an order in the supply chain.
-    * **Number of Records:** **124,697**
+* **Orders:** Unique identifiers for each order placed, including multiple supply chain timestamps.  
+    * Records: **124,697**
 
-* **Users:** This table holds geographic and some demographic information about every customer the company has ever had.
-    * **Number of Records:** **100,000**
+* **Users:** Customer information including demographic and geographic details.  
+    * Records: **100,000**
 
 <p align="center">
 <img  height="520" width="720"
@@ -46,70 +63,79 @@ The company's data is stored across **four** key tables, which are used to measu
 
 ![Main KPI Dashboard](https://github.com/AIK-01/Data-Analysis/blob/main/Project-1%20-%3E%20Ecommerce%20Performance%20Analysis/Others/Images/KPI%20Dashboard.png)
 
-For the majority of the period analyzed, the company consistently attracted around **1,150** new users each month. However, a significant spike occurred in May **2025**, when the company gained over **3,100** new users. Notably, **70%** of these new users came from the 'Search' traffic source. This presents an opportunity for the operating team to investigate what caused this exceptional increase and learn how to attract more users. The company has been very effective at turning new users into paying customers, which has led to a major increase in both new buyers and total buyers since **2024**.
+Between 2019 and mid-2025, **The Look** has demonstrated strong growth across its core business metrics:  
 
-Total Revenue and Profit have shown impressive growth over this period, with a substantial increase in profit since the start of **2025**. Although total revenue experienced a small dip in February **2025** after a period of rapid growth in late **2024**, it recovered quickly to offset that decline. The company's costs appear to be well-managed in comparison to its revenue and profit, which suggests improved operational efficiency and growing profit margins. Over the analyzed period, the company has stabilized its profit margin at approximately **50%**. The current annual growth rate for revenue and profit is also very strong.
+- **User Acquisition:** The company consistently attracted ~1,150 new users per month, with a spike in May 2025 (3,100+ new users, 70% from Search traffic). Conversion from new users to buyers is strong, fueling revenue growth.  
+- **Revenue & Profit:** Revenue exceeded **$16.7M** with profit at **$8.67M**. Margins have stabilized at ~**50%**, supported by effective cost management. The company achieved its **first $1M revenue month** in May 2025.  
+- **Sales Volume:** Closely tracks growth in buyers, showing a healthy conversion of customer acquisition into transactions.  
+- **Average Order Value (AOV):** Stable between **$80–95**, averaging **$87.10**. Growth is primarily volume-driven rather than price-driven.  
 
-Sales Volume consistently reflects the positive trends in customer acquisition and revenue, showing a steady and accelerating increase. The clear upward trend in late **2024** and early **2025** confirms that the company is successfully turning increased customer engagement into higher sales.
-
-Unlike the other metrics, the Average Order Value (AOV) has remained fairly stable over the period, staying between **$80** and **$95**, with an average of **$87.10**. This stability suggests that the major growth in revenue and sales volume is primarily driven by an increase in the *number* of customers and transactions, rather than an increase in the value of each individual order.
-
-In summary, the company is experiencing a period of strong, accelerating growth across key business areas. The significant increases in new users, total buyers, revenue, profit, and sales volume are very positive. The consistent Average Order Value shows that our current strategy is effectively expanding our customer base and increasing how often they buy.
-
-Moving forward, it will be important to continue watching these trends, with a special focus on keeping up the momentum in customer acquisition and making sure that costs are managed effectively as the company scales.
+Overall, the company is in a period of **accelerating growth**, with strong revenue and profit performance and healthy customer acquisition trends. Continued focus on retention and pricing strategy could further enhance profitability.
 
 ---
 
 ## Insights Deep Dive
 
-### User and Customer Acquisition
+### 1. User and Customer Acquisition
+- **New users:** Calculated via `creation_date` in the `Users` table.  
+- **Buyers:** Identified through `shipping_date` in `Ordered Items`.  
+- Challenge: `Inventory Items` lacks user IDs, underestimating true customer counts.  
 
-New users were counted using the `creation_date` from the `Users` table. New buyers and total buyers were counted using the `shipping_date` from the `Ordered Items` table. We had to connect user IDs with sales records to accurately count each customer's purchase. Fortunately, the `Ordered Items` table contains both user IDs and sales records. However, the user ID is not available in the `Inventory Items` table, which contains many more records of sold products. This makes it difficult to get an exact number of new and total buyers for each month.
+**Assumption:** ~2 products per order, 1 purchase per customer per month. Applying this increases the estimated customer base significantly since late 2022, suggesting the dashboard underreports actual growth.  
 
-A potential way to account for this missing data is to assume that each order includes an average of **two** products, and that no customer makes more than one purchase in a single month. Using this assumption, the total customer base in each month would include thousands of more people since October **2022**. This suggests that the company's actual customer base is likely much larger than what is shown in the main KPI dashboard.
+---
 
-### Total Revenue, Profit, and Cost
+### 2. Revenue, Profit, and Cost
+- **Revenue:** Sum of `retail_price` of sold products.  
+- **Cost:** Sum of `cost` column.  
+- **Profit:** Revenue – Cost.  
 
-All **three** of these metrics were calculated by combining sales records from the `Inventory Items` and `Ordered Items` tables. Unlike the **customer acquisition** metric, there are no missing data issues for these calculations. This means the numbers shown in the **KPI**  dashboard for these **three** metrics are accurate. **Revenue** was calculated by adding up the `retail_price` of all sold products. **Cost** was calculated by adding up the values in the `cost` column, and **Profit** was calculated by subtracting the total cost from the total revenue. The company achieved its first **Million-Dollar** revenue per month in May **2025**. The company's total (Net) Revenue is **$16.7M**, and its total (Net) Profit is **$8.67M**.
+The company’s first **$1M+ month** occurred in May 2025. Annualized totals: **$16.7M revenue** and **$8.67M profit**.  
 
-As mentioned in the executive summary, the company has stabilized its profit margin at about **50%**. A simple **20%** increase in the sale price of all products could have raised the profit margin to **60%**. A price increase of this magnitude could have resulted in **total revenue** exceeding **$20M**, and **net profit** could have been as high as **$12M**. This shows the significant growth that could be achieved by making a small change to **product pricing**. The company has not changed its product prices since its beginning, even though the economy has fluctuated. The fact that both retail prices and product costs have remained steady gives the company a great opportunity to grow by creating a better sales strategy. For this reason, I believe that increasing product prices to boost the bottom line is a smart move for the operating team to consider. The table below shows a yearly comparison of the current revenue and profit against a **20%** increase in the product prices.
+- **Scenario analysis:** A **20% price increase** could raise margins from 50% → 60%, lifting revenue to **$20M+** and profit to **$12M** without major operational changes.  
 
 <img  height="400" width="520"
    src="https://github.com/AIK-01/Data-Analysis/blob/main/Project-1%20-%3E%20Ecommerce%20Performance%20Analysis/Others/Images/Annual%20Comparison%20of%20CRP.png" 
    alt="Annual Comparison of Revenue and Profit with a 20% Increase">
 
-### Sales Volume
+---
 
-The company is successfully converting customer interest into more sales. The trends for **total buyers** and **sales volume** look nearly identical, which shows that more buyers lead to a greater quantity of sales. Therefore, the company needs to not only understand how to attract more customers but also how to keep them. The company should also plan better marketing campaigns to hold the attention of its customer base. The table below displays the company's annual sales volume and the growth rate compared to previous years.
+### 3. Sales Volume
+Sales volume growth mirrors buyer growth, confirming strong conversion of acquisition to transactions.  
+
+- To sustain momentum, **customer retention strategies** and targeted marketing campaigns are critical.  
 
 <img  height="250"
    src="https://github.com/AIK-01/Data-Analysis/blob/main/Project-1%20-%3E%20Ecommerce%20Performance%20Analysis/Others/Images/Annual%20Sales%20Volume%20%26%20GR.png" 
    alt="Annual Sales Volume and Growth Rate">
 
-_N.B._ **2025** shows a negative growth because it doesn't contain the data for the whole year. As mentioned throughout the project, the data includes the records from January 2019 to June 2025. 
+_Note: 2025 growth appears negative due to incomplete yearly data (Jan–Jun only)._
 
-### Average Order Value (AOV)
+---
 
-To calculate the **AOV**, we need the total value of all **transactions** for a given period and the number of **orders** in that same time frame. To identify each unique order, we need a unique `order_id` connected to the sales records. However, similar to the customer acquisition data, there is a lack of data for **AOV**. While the `Ordered Items` table includes the `order_id`, the `Inventory Items` table does not. This means most of the sales records are missing a way to track the order they belong to.
-
-The **AOV** presented in the main **KPI** dashboard is based only on the `Ordered Items` table. To include the records from the `Inventory Items` table, we can make an assumption that every order contains **2** items. With this assumption, the number of orders from the `Inventory Items` table would be the number of records divided by **2**. When we combine both tables to calculate a new, "combined" **AOV**, the results are quite different.
+### 4. Average Order Value (AOV)
+- **Challenge:** `Inventory Items` table lacks `order_id`, limiting accurate AOV calculation.  
+- Dashboard AOV = **$87.10** (based only on `Ordered Items`).  
+- Adjusted assumption (2 items/order) + combined tables estimate true AOV ≈ **$100**.  
 
 ![Comparison of AOV calculations with and without combined data](https://github.com/AIK-01/Data-Analysis/blob/main/Project-1%20-%3E%20Ecommerce%20Performance%20Analysis/Others/Images/ComparedAOV.png)
-
-As we can see, the average difference between the two calculations is **$16.61 ($103.71 - $87.10)**, which is a significant difference for this metric. The combined **AOV** has been consistently between **$99** and **$110** since June **2021**. This suggests that the company's true **AOV** is likely around **$100**.
 
 ---
 
 ## Recommendations
 
-Based on our analysis of the company's performance, here are some **key recommendations** for the operating and data teams:
-
 ### For the Operating Team
-
-* **Investigate Recent Growth:** Look into the reasons behind the significant jump in new users in May **2025**, especially the success of the 'Search' traffic source. Understanding this can help us attract more users in the future.
-* **Consider a Price Adjustment:** Since product prices haven't changed since the company started, consider a small, strategic increase. Our analysis suggests this could significantly raise the company's profit margin.
-* **Focus on Customer Retention:** Alongside attracting new customers, develop new plans and marketing campaigns to encourage existing customers to keep buying from us. This will help sustain long-term growth.
+1. **Investigate May 2025 Spike**  
+   Analyze Search traffic drivers to replicate and scale this surge in user acquisition.  
+2. **Strategic Price Adjustment**  
+   Introduce modest price increases (e.g., 10–20%) to capture higher margins and strengthen profitability.  
+3. **Customer Retention Focus**  
+   Develop loyalty programs, targeted campaigns, and personalized offers to sustain long-term growth.  
 
 ### For the Data Team
+1. **Enhance Data Integration**  
+   Ensure all sales records in `Inventory Items` are linked to **user IDs** and **order IDs** for accurate customer and AOV analysis.  
+2. **Data Quality Improvements**  
+   Implement stronger validation and tracking processes to reduce reliance on assumptions.  
 
-* **Improve Data Quality:** It's crucial to get a more accurate picture of our customers and sales. We need to work on a solution to connect **user IDs** & **order IDs** to all sales records, especially in the `Inventory Items` table. This will give us a much better understanding of our actual customer base and the true Average Order Value, as well as some other key business metrics.
+---
