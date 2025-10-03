@@ -22,18 +22,12 @@ These include:
 - Popular sports like **athletics**, **gymnastics**, and **swimming** have many participants, increasing competition compared to less-known sports.
 
 - Less-known sports have fewer participants, giving countries with less focus on sports a higher chance of winning.
-
 - Countries should train athletes in multiple sports, not just one or two, to avoid failure. The Olympics is about continuous improvement, so diversifying can help find a sport they excel in.
-
 - Many countries stop participating in the Olympics after a few attempts due to a lack of success. They should try all sports to find where they can win medals and then train their athletes accordingly.
-
-- While training is crucial, factors like age, height, weight, and BMI also matter in the Olympics. For example, a 10-year-old can’t outrun a 25-year-old, and an 8-foot-tall player has an advantage in           basketball over a 5-foot-tall player.
-
-- Countries without cold climates are less likely to participate in the Winter Olympics. They struggle to train athletes for cold conditions, affecting performance. Solutions are needed from both countries and the IOC(International Olympic Committee).
-
+- While training is crucial, factors like **age**, **height**, **weight**, and **BMI** also matter in the Olympics. For example, a 10-year-old can’t outrun a 25-year-old, and an 8-foot-tall player has an advantage in basketball over a 5-foot-tall player.
+- Countries without cold climates are less likely to participate in the Winter Olympics. They struggle to train athletes for cold conditions, affecting performance. Solutions are needed from both countries and the **IOC**(International Olympic Committee).
 - The Winter Olympics have fewer sports due to less participation. It should offer as many sports as the Summer Olympics to increase interest and participation.
-
-- Many countries don’t participate in women’s sports. The IOC should promote gender, cultural, and racial equality to ensure no one is left behind in the Olympics.
+- Many countries don’t participate in women’s sports. The **IOC** should promote gender, cultural, and racial equality to ensure no one is left behind in the Olympics.
 
 
 # Questions & Hypotheses
@@ -61,7 +55,7 @@ These include:
 **A. Youngsters(18-35) are more likely to win competitions than oldsters(35+).**
   - Since Younger people are likely more energetic than older people.
 
-**B. The weight and height of the players matter together.(BMI)**
+**B. The weight and height of the players matter together. (BMI)**
   - Overweight people are more likely to win fewer competitions.
 
 **C. There are some specific reasons for less athletes participating in**
@@ -73,55 +67,56 @@ These include:
 Before jumping into the actual analysis, I discovered some skewness in the data, and it can’t be fixed without dividing the data into multiple parts and analyzing each part separately. First, I’m gonna divide the dataset for two different seasons, ‘SUMMER’ and ‘WINTER’, and then I’m gonna divide these two parts again into two more parts. One for males and the other for females.
 So I have 4 new tables.
 
-- Summer Male
-- Summer Female
-- Winter Male
-- Winter Female
+- **Summer Male**
+- **Summer Female**
+- **Winter Male**
+- **Winter Female**
 
-While performing EDA(Exploratory Data Analysis), I found that the Event column correlates with the Sex column. If the Event name contains the word “Men’s”, the Sex column value is ‘M’, indicating a Male, Likewise, if the Event name contains the word “Women’s” then the Sex column value is ‘F’ indicating a Female, which is a usual thing. But some Event names do not contain either, but rather contains a common word ‘Mixed’ across the column.
-This indicates that the sport is for both ‘Male’ & ‘Female’, and most of these sports have double participants where one of them is a ‘Male’ and the other is a ‘Female’. Therefore, these events can’t be considered specific to Sex, nor can they be analyzed by including these records in the 4 tables I mentioned earlier, because those 4 tables are gender specific. That's why I analyzed these Mixed events separately, and they are described at the very end of the project.
+While performing **EDA**(Exploratory Data Analysis), I found that the `event` column correlates with the `sex` column. If the Event name contains the word “**Men’s**”, the `sex` column value is ‘**M**’, indicating a Male. Likewise, if the Event name contains the word “**Women’s**”, the `sex` column value is ‘**F**’, indicating a Female; it is a usual thing. But some Event names do not contain either, instead  contains a common word ‘**Mixed**’ across the column.
+
+This indicates that the sport is for both ‘**Male**’ & ‘**Female**’, and most of these sports have double participants where one of them is a ‘Male’ and the other is a ‘Female’. Therefore, these events can’t be considered specific to Sex, nor can they be analyzed by including these records in the 4 tables I mentioned earlier, because those 4 tables are gender specific. That's why I analyzed these Mixed events separately, and they are described at the very end of the project.
 
 
-- 1. Which Country has won the highest Number of Medals?
-	This can give a clear idea of country rankings based on their Medal winnings in various sports.
-	This can give a demonstration of which countries are better at sports.
+**1. Which Countries have won the highest Number of Medals?**
+  - **1.1.** This can provide a clear idea of countries' rankings based on their Medal winnings in various sports.
+  - **1.2.** This can demonstrate which countries excel in sports.
 
-To answer these questions, I used a method to rank countries by their medals. If two countries have the same number of medals, we need a way to decide who is higher or lower. We can’t rank them by number alone, because medals have different types: Bronze, Silver, and Gold. For example, a country with 10 Gold medals is higher than a country with 10 Bronze medals, though they have the same total number of medals.
+To answer these questions, I used a method to rank countries by their medals. If two countries have the same number of medals, we need a way to decide which one is better than the other. We can’t rank them by numbers alone, because medals have different types: **Bronze**, **Silver**, and **Gold**. For example, a country with **10 Gold medals** is higher than a country with **10 Bronze medals**, though they have the same total number of medals.
 
 ## Medal Points Explained :
 
-I ranked countries by their medals in different sports using the Medal Points Method. Each medal point is worth one set of medals, which has one gold 🥇, one silver 🥈, and one bronze 🥉 medal. A set of medals is worth 6 points, the points are calculated based on the values below.
+I ranked countries by their medals in different sports using the Medal Points Method. Each medal point is worth one set of medals, which has one gold 🥇, one silver 🥈, and one bronze 🥉 medal. A set of medals is worth 6 points. The points are calculated based on the values below.
 
 1 Gold Medal   🥇= 3 points
 1 Silver Medal 🥈= 2 points
 1 Bronze Medal 🥉= 1 point
 
-For example, If a country has won 10 Gold Medals, 15 Silver Medals and  20 Bronze Medals then its total Medal points would be -> 
+For instance, if a country has won 10 Gold Medals, 15 Silver Medals, and 20 Bronze Medals, then its total Medal points would be -> 
 				((10*3)+(15*2)+(20*1))/6
 				= 13.33 ≈ 13
-1.1.1. country rankings based on their Medal winnings in various sports: 
-		Top 10 countries with the highest number of Medal Points.
+**1.1. Country rankings based on their Medal winnings in various sports:** 
 
-[img]  | [img]
+[img] | [img]
 ------|------
 [img] | [img]
 
-To view the full list in spreadsheets, click here
+_To view the full list in spreadsheets, click here_
 
-1.1.2. Demonstration of which countries are better at sports(based on Medal Points Ranking).
-As you might have noticed in the earlier slide that three countries were common across all the result sets. They are: the USA, Russia, and Germany. Therefore, we can easily recognize them as the best performing country in Olympic history. Besides them, there are a few countries that have a significant number of wins in their Olympic career. Among them are the UK, Italy, and France. I ranked them based on their total Medal Points by combining all the result sets we have seen earlier.
+**1.2. Demonstration of which countries are better at sports(based on Medal Points Ranking).**
+
+You might have noticed in the earlier images that three countries were common across all the result sets. They are: the **USA**, **Russia**, and **Germany**. Therefore, we can easily recognize them as the best-performing country in Olympic history. Besides them, there are a few countries that have a significant number of wins in their Olympic career. Among them are the **UK**, **Italy**, and **France**. I ranked them based on their total Medal Points by combining all the result sets we have seen earlier.
 
 [img]
 
-To see the full list in spreadsheets, click here
+_To see the full list in spreadsheets, click here_
 
-- 2. What Sports are most popular?
-	2.1.	In each country
-	2.2.	Of all time
+**2. What Sports are most popular?**
+  - **2.1.** In each country?
+  - **2.2.** Of all time?
 
-In this scenario participation rate is the criterion for determining the popularity of a sport. That means the more people participate in a sport, the more popular it is.
+In this scenario, participation rate is the criterion for determining the popularity of a sport. That means the more people participate in a sport, the more popular it is.
 
-2.2.1. Sports popularity in Different countries.
+**2.1. Sports popularity in Different countries.**
 
 [img] (on the left) | 	Country: Name of the countries.
 
@@ -129,24 +124,23 @@ In this scenario participation rate is the criterion for determining the popular
 
 			Total Participation: The number of total participation of a country in that specific sport. 
 
-View the full list, click here
+**To view the full list, click here**
 
-2.2.2. Sports popularity of all time.
+**2.2. Sports popularity of all time.**
 
 [img]
 
-Total Participants : Showing the total number of participants for different sports in that table. (Listed in Descending order)
+**Total Participants** refers to the total number of participants for specific sports in that table. (Listed in Descending order)
 
-To see the full list, click here
+**To see the full list, click here**
 
-
-- 3. Which country is best in which sport?
-		3.1	 Based on Sports
-		3.2	 Based on Countries
+**3. Which country is best in which sport?**
+ - **3.1.**	 Based on Sports
+ - **3.2.**	 Based on Countries
 
 It can have two possible result sets. One could be based on the sports while the other could be based on the countries. That’s why I am dividing the question into two parts even though I had only one question for this at the initial state. 
 
-3.3.1. Best performer country in different sports( Sports Based)
+**3.1. Best performer country in different sports( Sports Based)**
 
 Sports: Name of the Sports. [img](on the right)
 
@@ -156,10 +150,10 @@ Medal Points: Total Medal points the country have earned in that particular Spor
 
 To view the full list, click here
 
-N.B.: If a sport is not listed, it means that all participating countries have earned 0 Medal Points in that sport, indicating that no country excels in it.
+_N.B.: If a sport is not listed, it means that all participating countries have earned 0 Medal Points in that sport, indicating that no country excels in it._
 
 
-3.3.2. Countries’ best performance in different sports( Country Based)
+**3.2. Countries’ best performance in different sports( Country Based)**
 
 Country: Name of the Countries. [img](on the right)
 
@@ -167,57 +161,59 @@ Sport: Name of the Sport that the country has performed their best in across tha
 
 Medal Points: Total Medal points the country have earned in that Sport within that result set.
 
-N.B.: If any Country’s name is not listed then it means the country have 0 Medal Points in all of its participated sports.
+_N.B.: If a country is not listed, it means that the country has 0 Medal Points in all the sports it participated in._
 
-4. What is the beginning and ending year of participation of each country? 
+**4. What are the beginning and ending years of participation of each country?** 
 
-To answer this question we need to look at the visualization of the participation rate that I used to determine the separation of Seasons and Genders.
+To answer this question, we need to look at the visualization of the participation rate that I used to determine the separation of Seasons and Genders.
 
 [img] 
 
-From the earlier visualization, we see the last Summer Olympic was in 2016 and the last Winter Olympic in 2014. If a country last participated in the 2016 Summer Olympic, it’s likely still participating. Similarly, if the last participation was in the 2014 Winter Olympic, the country is likely still involved. For countries that stopped participating before these years, the end year is provided in the result set.
+From this visualization, we see the last **Summer Olympics** was in **2016** and the last **Winter Olympics** in **2014**. If a country last participated in the **2016** Summer Olympics, it’s likely still participating. Similarly, if the last participation was in the **2014** Winter Olympics, the country is likely still involved. For countries that stopped participating before these years, the end year is provided in the result set.
 
 [img](on the left) | To see the full list, click here
 
-- 5. What is the average Age, Weight and Height of athletes in different sports?
+**5. What is the average Age, Weight, and Height of athletes in different sports?**
 
-To answer this question, I used mean as the average.
+To answer this question, I used the mean as the average.
 
 [img]
 
-N.B.: You will notice some NULLs across the result sets, they are created because all the corresponded data values that are supposed to be used for the calculation were NULLs. 
+_N.B.: You will notice some NULLs across the result sets; they are created because all the corresponding data values that are supposed to be used for the calculation were NULLs._ 
 
-- 6. Is there anything hidden in the age range?
+**6. Is there anything hidden in the age range?**
 
 There are multiple ways to approach this question. I used the participation rate of different ages to assess their significance in future data samples. For example, to determine the success rate of various height and weight ranges, we need to understand the composition of the data sample to accurately represent the entire population. This approach also helps prevent bias in the results.
 
 To answer the question in the way described above, we need to look at several key points of the data. They are :-
-i. The Range of Age in the Tables/Datasets.
-ii. The athletes participation in Unique Sports for all the ages.
+i. The **Range of Age** in the Tables.
+ii. The athletes' **participation in Unique Sports** for all ages.
 
 
-To understand these two points we need to recall the number of Unique Sports in the Tables.
+To understand these two points, we need to recall the number of Unique Sports in the Tables.
 
-Summer Male	: 44 Unique Sports
-Summer Female	: 35 Unique Sports
-Winter Male	: 16 Unique Sports 
-Winter Female	: 14 Unique Sports
+- **Summer   Male** : 	**44** Unique Sports
+- **Summer Female** : 	**35** Unique Sports
+- **Winter   Male** : 	**16** Unique Sports
+- **Winter Female** : 	**14** Unique Sports 
 
 [img sheet] | [img histogram]
 [img sheet] | [img histogram]
 [img sheet] | [img histogram]
 [img sheet] | [img histogram]
 
-You might have noticed the term ‘PIUS,’ which stands for ‘Participation In Unique Sports.’ It indicates the number of unique sports athletes of a certain age have participated in. For example, in the Summer Male table, there are 5,906 athletes aged 19 who have participated in 35 different sports. Although the table includes 44 unique sports, participating in 35 is still significant. Therefore, athletes aged 19 are important for future analytics.
+You might have noticed the term ‘**PIUS**,’ which stands for ‘**Participation In Unique Sports**.’ It indicates the number of unique sports athletes of a certain age has participated in. For example, in the Summer Male table, there are **5,906** athletes aged **19** who have participated in **35** different sports. Although the table includes **44** unique sports, participating in **35** is still significant. Therefore, athletes aged **19** are important for future analytics.
 
-The visualizations in the earlier slides show that individuals aged 18 to 35 are most likely to participate in more unique sports. Athletes younger or older than this range are less likely to participate in multiple sports. The visualizations also reveal that the data is skewed towards younger athletes, which you can confirm by looking at the ‘Total Participants’ of different ages in the [spreadsheet].
+The visualizations earlier show that individuals aged **18** to **35** are most likely to participate in more unique sports. Athletes younger or older than this range are less likely to participate in multiple sports. The visualizations also reveal that the data is skewed towards younger athletes, which you can confirm by looking at the ‘**Total Participants**’ of different ages in this [spreadsheet].
 
-So, we can say now that the skewness of different types were hidden in the age.
+Therefore, we can say that the skewness of different types were hidden in the age.
+
+--- 
 
 # Testing Hypotheses
 
-A. Youngsters(18-35) are likelier to win competitions than oldsters(35+). 
-	- Since younger people are more energetic than older.
+**A. Youngsters(18-35) are more likely to win competitions than oldsters(35+).**
+  - Since Younger people are likely more energetic than older people.
 
 From the answer to the last question of previous section, we confirmed that the data was skewed towards the younger(18-35) athletes. That means a big portion of the data is covered with the athletes of this age range. So there is a high Chance to be biased about a result from a hypothesis like this one. Let’s compare two age ranges to determine whether the hypothesis is appropriate or not. 
 
@@ -237,35 +233,35 @@ Here we are viewing the Summer Male table and comparing two different Age groups
 
 However, let’s see how this hypothesis is working for different tables.
 
-I am providing only the outcomes from the tables. You can confirm these insights By looking at this [Spreadsheet].
+I am providing only the outcomes from the tables. You can confirm these insights by viewing this [Spreadsheet].
 
-1. Summer Male:
-A(18-35): Out of every 6 athletes, 1 is likely to win a medal.
-B(36-53): Out of every 6 athletes, 1 is likely to win a medal. 
+ 1. Summer Male:
+ A(18-35): Out of every 6 athletes, 1 is likely to win a medal.
+ B(36-53): Out of every 6 athletes, 1 is likely to win a medal. 
 
-The Hypothesis was wrong, and the outcome is Neutral. A:B = 6 : 6
+ The Hypothesis was wrong, and the outcome is Neutral. A:B = 6 : 6
 
-2. Summer Female:
-A(18-35): Out of every 6 athletes, 1 is likely to win a medal.
-B(36-53): Out of every 8 athletes, 1 is likely to win a medal. 
+ 2. Summer Female:
+ A(18-35): Out of every 6 athletes, 1 is likely to win a medal.
+ B(36-53): Out of every 8 athletes, 1 is likely to win a medal. 
 
-The Hypothesis was correct, and the outcome is Positive. A:B = 6 : 8
+ The Hypothesis was correct, and the outcome is Positive. A:B = 6 : 8
 
-3. Winter Male:
-A(18-35): Out of every 9 athletes, 1 is likely to win a medal.
-B(36-53): Out of every 7 athletes, 1 is likely to win a medal. 
+ 3. Winter Male:
+ A(18-35): Out of every 9 athletes, 1 is likely to win a medal.
+ B(36-53): Out of every 7 athletes, 1 is likely to win a medal. 
 
-The Hypothesis was wrong , and the outcome is Negative. A:B = 9 : 7
+ The Hypothesis was wrong, and the outcome is Negative. A:B = 9 : 7
 
-4. Winter Female:
-A(18-35): Out of every 8 athletes, 1 is likely to win a medal.
-B(36-53): Out of every 5 athletes, 1 is likely to win a medal. 
+ 4. Winter Female:
+ A(18-35): Out of every 8 athletes, 1 is likely to win a medal.
+ B(36-53): Out of every 5 athletes, 1 is likely to win a medal. 
 
-The Hypothesis was wrong , and the outcome is Negative. A:B = 8 : 5
+ The Hypothesis was wrong, and the outcome is Negative. A:B = 8 : 5
 
 
-B. The weight and height of the players matter together. (BMI - Body Mass Index)
-	- Overweight people are likelier to win less competitions.
+**B. The weight and height of the players matter together. (BMI - Body Mass Index)**
+  - Overweight people are more likely to win fewer competitions.
 
 Before testing the hypothesis, I want to divide the athletes into 2 parts instead of 4 parts defined in the earlier scenarios. Instead of two category for Seasons and two for Sex/Gender, I want to keep the category only for Sex/Gender. That means this hypothesis will be test based on Sex and not based on Season + Sex. Now let’s break what the hypothesis is actually about. 
 
