@@ -4,7 +4,7 @@
 - [Project Overview](#project-overview)
 - [Data Structure Overview](#data-structure-overview)
 - [Summary of the Analysis](#summary-of-the-analysis)
-- [Questions & Hypotheses](#questions-&-hypotheses)
+- [Questions & Hypotheses](#questions-hypotheses)
   - [Questions](#questions)
   - [Hypotheses](#hypotheses)
 - [Answering Questions](#answering-questions)
@@ -12,8 +12,8 @@
 - [Testing Hypotheses](#testing-hypotheses)
 - [Mixed Events](#mixed-events)
   - [Q&A](#q&a)
-    - [Questions](##questions)
-    - [Answering Questions](#answering-questions)
+    - [Questions](#questions-1)
+    - [Answering Questions](#answering-questions-1)
 - [Historical Facts](#historical-facts)	
 
 # Project Overview
