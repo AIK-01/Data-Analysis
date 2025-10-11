@@ -8,12 +8,12 @@
   - [Questions](#questions)
   - [Hypotheses](#hypotheses)
 - [Answering Questions](#answering-questions)
-  - [Medal Points](##medal-points-explanation)
+  - [Medal Points](#medal-points-explanation)
 - [Testing Hypotheses](#testing-hypotheses)
 - [Mixed Events](#mixed-events)
-  - [Q&A](##q&a)
-    - [Questions](###questions)
-    - [Answering Questions](###answering-questions)
+  - [Q&A](#q&a)
+    - [Questions](##questions)
+    - [Answering Questions](#answering-questions)
 - [Historical Facts](#historical-facts)	
 
 # Project Overview
