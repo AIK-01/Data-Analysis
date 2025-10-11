@@ -1,3 +1,21 @@
+# Olympic Events & Performance Analysis (1996-2016)
+
+# Table of Contents
+- [Project Overview](project-overview)
+- [Data Structure Overview](data-structure-overview)
+- [Summary of the Analysis](summary-of-the-analysis)
+- [Questions & Hypotheses](questions-&-hypotheses)
+  - [Questions](questions)
+  - [Hypotheses](hypotheses)
+- [Answering Questions](answering-questions)
+  - [Medal Points](medal-points-explanation)
+- [Testing Hypotheses](testing-hypotheses)
+- [Mixed Events](mixed-events)
+  - [Q&A](q&a)
+    - [Questions](questions)
+    - [Answering Questions](answering-questions)
+- [Historical Facts](historical-facts)	
+
 # Project Overview
 
 This analysis is performed on the **Olympic Sports events** and **participants** over a time span of **120 years**. This analysis can reveal the patterns and factors that influence Olympic Sports performance and participation, which can be useful for news reporters, sports enthusiasts, and anyone curious about the Olympics.
@@ -9,10 +27,10 @@ I have been provided with **2** datasets regarding the Olympics.
 
 These include:
 
-- **athletes_events :** This dataset includes demographic information about individual athletes. It also provides information about the participated events of each athlete. Additionally, it includes the NOC code as well as the Medal type of an athlete if they have won an event.
+- **athletes_events :** **demographic** information about individual athletes, as well as their participated **events**. Additionally, includes the **NOC** code as well as the **Medal** type of an athlete if they have won an event.
   -  Records: 271,116 
 
-- **noc_regions :** This Table includes information about Distinct NOC codes and the region/country they represent.
+- **noc_regions :** Information about Distinct **NOC** codes and the **region/country** they represent.
   - Records: 230
 
 <p align='center'>
@@ -40,10 +58,10 @@ These include:
 
 # Questions & Hypotheses
 
-## Questions:
+## Questions
 
 **1. Which Countries have won the highest Number of Medals?**
-  - **1.1.** This can provide a clear idea of countries' rankings based on their Medal winnings in various sports.
+  - **1.1.** This can provide a clear idea of countries' ranking based on their Medal winnings in various sports.
   - **1.2.** This can demonstrate which countries excel in sports.
 
 **2. What Sports are most popular?**
@@ -70,7 +88,7 @@ These include:
   - **Women's sports** - not all countries participate in women's sports, AND/OR women have fewer sports to participate in.
   - **Winter sports** - not all countries participate in the Winter season.
 
-# Answering Question
+# Answering Questions
 
 Before jumping into the actual analysis, I discovered some skewness in the data, and it can’t be fixed without splitting the data into multiple parts and analyzing each part separately. First, I’m gonna divide the dataset for two different seasons, ‘**SUMMER**’ and ‘**WINTER**’, and then I’m gonna split these two parts again into two more parts; one for '**Male**' and the other for '**Female**'.
 So I have **4** new tables.
@@ -97,12 +115,12 @@ This indicates that the sport is for both ‘**Male**’ & ‘**Female**’, and
 <br>
 <br>
 **1. Which Countries have won the highest Number of Medals?**
-  - **1.1.** This can provide a clear idea of countries' rankings based on their Medal winnings in various sports.
+  - **1.1.** This can provide a clear idea of countries' ranking based on their Medal winnings in various sports.
   - **1.2.** This can demonstrate which countries excel in sports.
 
 To answer these questions, I created a method to rank countries by their medals. If two countries have the same number of medals, we need a way to decide which one is better than the other. We can’t rank them by numbers alone, because medals have different types: **Bronze**, **Silver**, and **Gold**. For example, a country with **10 Gold medals** is higher than a country with **10 Bronze medals**, though they have the same total number of medals.
 
-## Medal Points Explained :
+## Medal Points Explanation
 
 I ranked countries by their medals in different sports using the Medal Points Method. Each medal point is worth one set of medals, which has one gold 🥇, one silver 🥈, and one bronze 🥉 medal. A set of medals is worth 6 points. The points are calculated based on the values below.
 
@@ -156,7 +174,7 @@ For instance, if a country has won **10 Gold Medals**, **15 Silver Medals**, and
 </table>
 </div>
 
-_To view the full list in spreadsheets, click here_  
+_To view the full list in spreadsheets, [click here](https://docs.google.com/spreadsheets/d/1oqJV3S9_qL5VndFNTljQNE0McKLaFjMqRjlywBcFf4Q/edit?gid=51880459#gid=51880459)_  
 <br>  
 **1.2. Demonstration of which countries are good at sports (based on Medal Points Ranking).**
 
@@ -168,7 +186,7 @@ You might have noticed in the earlier images that three countries were common ac
 	alt="Ranking Q1" >
 </p>
 
-_To see the full list in spreadsheets, click here_
+_To see the full list in spreadsheets, [click here](https://docs.google.com/spreadsheets/d/1oqJV3S9_qL5VndFNTljQNE0McKLaFjMqRjlywBcFf4Q/edit?gid=2127167596#gid=2127167596)_
 <br>
 <br>
 <br>
@@ -205,7 +223,7 @@ The number of total participation of a country in that specific sport.
   
 </div>
 
-_To view the full list, click here_  
+_To view the full list, [click here](https://docs.google.com/spreadsheets/d/1MFsEaD5LD8L94DMGFYJK67B1Kz9VkKHb0iBeZGNW26A/edit?gid=316067201#gid=316067201)_  
 <br>
 <br>
 **2.2. Sports popularity of all time.**
@@ -229,7 +247,7 @@ Total number of participants for specific sports in that table. <br>(Listed in D
   
 </div>
 
-_To see the full list, click here_  
+_To see the full list, [click here](https://docs.google.com/spreadsheets/d/1MAwqqA8FZuNzAVA7KMixxwgMTGCuxgCZshwAK7-OJ4g/edit?gid=156587825#gid=156587825)_  
 <br>
 <br>
 **3. Which country is best in which sport?**
@@ -261,9 +279,9 @@ Total **Medal Points** the country have earned in that particular **Sport** <br>
 </table>
 </div>
 
-_To view the full list, click here_
+_To view the full list, [click here](https://docs.google.com/spreadsheets/d/1yBdz8PXNtNQAobQXivWLfPyIJ82bq04M_TdqaXkhvxc/edit?gid=133644499#gid=133644499)_
 
-_N.B.: If a sport is not listed, it means that all participating countries have earned 0 Medal Points in that sport, indicating that no country excels in it._  
+_N.B.: If a sport is not listed, it means that all participating countries have earned **0** Medal Points in that sport, indicating that no country excels in it._  
 <br>
 <br>
 **3.2. Countries’ best performance in different sports (Country Based)**
@@ -289,7 +307,9 @@ Total **Medal Points** the country have earned in that **Sport** <br> in that ta
 </table>
 </div>
 
-_N.B.: If a country is not listed, it means that the country has 0 Medal Points in all the sports it participated in._  
+_To view the complete list, [click here](https://docs.google.com/spreadsheets/d/1SPNzIW5KT27LRP70Yvnx-VBuANNj7KBj7n2FlOM6LNc/edit?gid=2011932197#gid=2011932197)_
+
+_N.B.: If a country is not listed, it means that the country has **0** Medal Points in all the sports it participated in._  
 <br>
 <br>
 **4. What are the beginning and ending years of participation of each country?** 
@@ -310,7 +330,7 @@ From this visualization, we see the last **Summer Olympics** was in **2016** and
 	alt="Q4" >
 </p>
 
-_To see the full list, click here_  
+_To see the full list, [click here](https://docs.google.com/spreadsheets/d/1lSZlIELjC06nAuX-HEb8zOJN0ER8XVEFwLnD0K88lnY/edit?gid=341606770#gid=341606770)_  
 <br>
 <br>
 **5. What is the average Age, Weight, and Height of athletes in different sports?**
@@ -323,7 +343,7 @@ To answer this question, I used the **mean** as the average.
 	alt="Q5" >
 </p>
 
-_To see the full list, click here_   
+_To see the full list, [click here](https://docs.google.com/spreadsheets/d/1nbFTbu1txn1IeEZHe-R33gtF1vqk11KQbBUreu9KVTc/edit?gid=1644641817#gid=1644641817)_   
 
 _N.B.: You will notice some **NULL**s across the result sets; they are created because all the corresponding data values that are supposed to be used for the calculation were **NULL**s._   
 <br>
@@ -420,7 +440,7 @@ To understand these two points, we need to recall the number of Unique Sports in
 
 You might have noticed the term ‘**PIUS**,’ which stands for ‘**Participation In Unique Sports**.’ It indicates the number of unique sports athletes of a certain age have participated in. e.g. in the **Summer Male** table, there are **5,927** athletes aged **19** who have participated in **35** different sports. Although the table includes **44** unique sports, participating in **35** is still significant. Therefore, athletes aged **19** are important for future analytics.
 
-The visualizations earlier show that individuals aged **18** to **35** are most likely to participate in more unique sports. Athletes younger or older than this range are less likely to participate in multiple sports. The visualizations also reveal that the data is skewed towards younger athletes, which can be confirmed by looking at the ‘**Total Participants**’ of different ages in this [spreadsheet].
+The visualizations earlier show that individuals aged **18** to **35** are most likely to participate in more unique sports. Athletes younger or older than this range are less likely to participate in multiple sports. The visualizations also reveal that the data is skewed towards younger athletes, which can be confirmed by looking at the ‘**Total Participants**’ of different ages in this [spreadsheet](https://docs.google.com/spreadsheets/d/1pf9Al9BC60DAzVdsowbRAtwRAyjWvNocbALz405XVVQ/edit?gid=297404889#gid=297404889).
 
 Therefore, we can say that the skewness of different types was hidden in the age.
 
@@ -453,7 +473,7 @@ In the earlier picture, we were viewing the **Summer Male** table and comparing 
 
 However, let’s see how this hypothesis is working for different tables.
 
-I am providing only the outcomes from the tables. You can confirm these insights by viewing this [Spreadsheet].
+I am providing only the outcomes from the tables. You can confirm these insights by viewing this [Spreadsheet](https://docs.google.com/spreadsheets/d/1--rITmJqS8966Eo8gYWeT7n-TQz_1v40sXZkDHzX_go/edit?gid=1871221069#gid=1871221069).
 
  **1. Summer Male:**  
  **A(18-35):** Out of every **6** athletes, **1** is likely to win a medal.  
@@ -574,15 +594,15 @@ N.B.:
 
 ### About Women's Sports
 
-By examining the **SF Q4** sheet from this [spreadsheet], you will recognize that in the **Summer Olympics**, all the countries that participated in **male** sports also participated in **female** sports. This demonstrates **no difference in national representation** between the two groups.
+By examining the **SF Q4** sheet from this [spreadsheet](https://docs.google.com/spreadsheets/d/1lSZlIELjC06nAuX-HEb8zOJN0ER8XVEFwLnD0K88lnY/edit?gid=1419609558#gid=1419609558), you will recognize that in the **Summer Olympics**, all the countries that participated in **male** sports also participated in **female** sports. This demonstrates **no difference in national representation** between the two groups.
 
-However, if you look at the [**WF Q4**] sheet, you’ll find that many countries do not participate in **female sports** in the **Winter** season. While male athletes from **106** countries participated in the Winter, female athletes came from **82** countries only. It shows that not all countries participate in **women’s** sports, especially during the **Winter** season.
+However, if you look at the [**WF Q4**](https://docs.google.com/spreadsheets/d/1lSZlIELjC06nAuX-HEb8zOJN0ER8XVEFwLnD0K88lnY/edit?gid=901134414#gid=901134414) sheet, you’ll find that many countries do not participate in **female sports** in the **Winter** season. While male athletes from **106** countries participated in the Winter, female athletes came from **82** countries only. It shows that not all countries participate in **women’s** sports, especially during the **Winter** season.
 
 Additionally, as seen in the answer to the **6th** question of the analysis, the **Summer Male** Table lists **44** unique sports, while the **Summer Female** Table lists only **35**. Similarly, the **Winter Male** Table has **16** unique sports, compared to **14** for the **Winter Female** Table. This demonstrates that women have fewer sports than men to participate in, which directly affects their participation rates. Therefore, my hypothesis is **correct**.
 
 ### About Winter Sports
 
-From the explanation of the previous part, we can clearly understand the reason for the difference in participation rates between the **Summer** and **Winter** Olympics. Many countries that participate in **Summer** don’t participate in **Winter** season. You can confirm it by looking at the total number of countries listed in every single sheet of this [Spreadsheet]. Additionally, the Winter Olympics offer significantly fewer sports compared to the Summer Olympics, which likely contributes to the large disparity in participation rates. This supports the conclusion that my hypothesis is **correct**.
+From the explanation of the previous part, we can clearly understand the reason for the difference in participation rates between the **Summer** and **Winter** Olympics. Many countries that participate in **Summer** don’t participate in **Winter** season. You can confirm it by looking at the total number of countries listed in every single sheet of this [Spreadsheet](https://docs.google.com/spreadsheets/d/1lSZlIELjC06nAuX-HEb8zOJN0ER8XVEFwLnD0K88lnY/edit?gid=341606770#gid=341606770). Additionally, the Winter Olympics offer significantly fewer sports compared to the Summer Olympics, which likely contributes to the large disparity in participation rates. This supports the conclusion that my hypothesis is **correct**.
 
 # Mixed Events
 
@@ -590,7 +610,7 @@ A Mixed event in the Olympics refers to a sports event where team participants m
 
 ## Q&A
 
-### Questions:
+### Questions  
 
 **1. When were the mixed events first introduced in the Olympics in the Summer and the Winter?**  
 **2. Which country when started and stopped participating in such events?**  
@@ -604,7 +624,7 @@ A Mixed event in the Olympics refers to a sports event where team participants m
 </p>
 <br>
 
-### Answering Questions: 
+### Answering Questions 
 
 **1. When were the Mixed events first introduced in the Olympics in different seasons?**  
 **Ans:**  The Mixed events were first introduced in the:-  
@@ -612,13 +632,13 @@ A Mixed event in the Olympics refers to a sports event where team participants m
 	**Winter Season** : Year **1924**  
 
 **2. Which country when started and stopped participating in such events?**  
-**Ans:**  Just like the **main analysis**, If a country stopped participating before **2016** in the **Summer**	Olympics, then its last participation year is shown in the result. Similarly, if a country stopped participating before **2014** in the winter Olympics, then its last participation year is given in the result. You can view the result set from [here].
+**Ans:**  Just like the **main analysis**, If a country stopped participating before **2016** in the **Summer**	Olympics, then its last participation year is shown in the result. Similarly, if a country stopped participating before **2014** in the winter Olympics, then its last participation year is given in the result. You can view the result set from [here](https://docs.google.com/spreadsheets/d/11Yi40SZ7RgtfLi2rSPGjIawj9JeJ0seEkRmIG3VGmnY/edit?gid=1543691228#gid=1543691228).
 
 **3. How many Unique Sports are there in this event category?**  
-**Ans:** In the Mixed Events category, there are only **11** sports in **Summer** Olympics, while only **4** in **Winter**. You can check the list [here].
+**Ans:** In the Mixed Events category, there are only **11** sports in **Summer** Olympics, while only **4** in **Winter**. You can check the list [here](https://docs.google.com/spreadsheets/d/1CEUmmJKLYDZN86XuzMxzJH-qgwRPzMAZXYbVs6vb9ZM/edit?gid=0#gid=0).
 
 **4. Who is the best in it?**  
-**Ans:** To check this, we need to look at the **Medal Points** of the countries. The result will be based on Sports. Click [here] to see the result.
+**Ans:** To check this, we need to look at the **Medal Points** of the countries. The result will be based on Sports. Click [here](https://docs.google.com/spreadsheets/d/1dpUFvm6d36rUhijp3bywfMAmOJA_nYfr5bQPr65Sr6k/edit?gid=1345309804#gid=1345309804) to see the result.
 
 
 
