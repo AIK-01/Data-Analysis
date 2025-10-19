@@ -29,3 +29,6 @@ The primary objectives were to:
 The project provides a comprehensive overview of how the Olympic landscape evolved over time, offering insights into **demographic shifts**, **competitive balance**, and the **changing dynamics** of international sports performance.
 
 ---
+
+© 2025 AIK-01. Licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/).  
+This repository and its contained projects are intended for learning and portfolio presentation only.
