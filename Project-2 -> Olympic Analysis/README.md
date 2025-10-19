@@ -132,7 +132,7 @@ So I have **4** new tables.
   
  <br>
  
-Additionally, while performing **EDA**(Exploratory Data Analysis), I found that the `event` column correlates with the `sex` column. If the Event name contains the word “**Men’s**”, the `sex` column value is ‘**M**’, indicating a **Male**. Likewise, if the Event name contains the word “**Women’s**”, the `sex` column value is ‘**F**’, indicating a **Female**. But some Event names do not contain either; instead, they contain a common word ‘**Mixed**’ across the column.
+Additionally, while performing **EDA**(Exploratory Data Analysis), I found that the `event` column correlates with the `sex` column. If the Event name contains the word “**Men**”, the `sex` column value is ‘**M**’, indicating a **Male**. Likewise, if the Event name contains the word “**Women**”, the `sex` column value is ‘**F**’, indicating a **Female**. But some Event names contain neither **Men** nor **Women**; instead, they contain a common word ‘**Mixed**’ across the column.
 
 This indicates that the sport is for both ‘**Male**’ & ‘**Female**’, and most of these sports have double participants where one of them is a ‘**Male**’ and the other is a ‘**Female**’. Therefore, these events can’t be considered specific to any **Sex**, nor can they be analyzed by including these records in the **4** tables I mentioned earlier, because those tables are gender specific. That's why I analyzed these Mixed events separately, and they are described at the very end of the project.
 <br>
@@ -142,7 +142,7 @@ This indicates that the sport is for both ‘**Male**’ & ‘**Female**’, and
   - **1.1.** This can provide a clear idea of countries' ranking based on their Medal winnings in various sports.
   - **1.2.** This can demonstrate which countries excel in sports.
 
-To answer these questions, I created a method to rank countries by their medals. If two countries have the same number of medals, we need a way to decide which one is better than the other. We can’t rank them by numbers alone, because medals have different types: **Bronze**, **Silver**, and **Gold**. For example, a country with **10 Gold medals** is higher than a country with **10 Bronze medals**, though they have the same total number of medals.
+To answer these questions, I created a method to rank countries by their medals. If two countries have the same number of medals, we need a way to decide which one is better than the other. We can’t rank them by numbers alone, because medals have different types: **Bronze**, **Silver**, and **Gold**. For example, a country with **10 Gold medals** is better than a country with **10 Bronze medals**, though they have the same number of medals.
 
 ## Medal Points Explanation
 
