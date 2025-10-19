@@ -2,6 +2,7 @@
 
 # Table of Contents
 - [Project Overview](#project-overview)
+- [Analytics Tools](#analytics-tools)
 - [Data Structure Overview](#data-structure-overview)
 - [Summary of the Analysis](#summary-of-the-analysis)
 - [Questions & Hypotheses](#questions--hypotheses)
@@ -20,6 +21,20 @@
 
 This analysis is performed on the **Olympic Sports events** and **participants** over a time span of **120 years**. This analysis can reveal the patterns and factors that influence Olympic Sports performance and participation, which can be useful for news reporters, sports enthusiasts, and anyone curious about the Olympics.
 
+# Analytics Tools
+To complete this analysis, the following tools were used:
+
+- **MySQL (DBMS):**
+Used for **data extraction**, **complex querying**, **segmentation**, and **statistical calculations** (**medal points**, **age**, **BMI**). Enabled joins between tables and prepared datasets for **gender**, **season**, and **event-based** analyses.
+
+- **OpenRefine:**
+Handled **data cleaning**, **standardization**, and **format consistency** across large datasets, ensuring uniform country codes, sport names, and categorical fields like gender and medal type.
+
+- **Spreadsheets:**
+leveraged for **summarization**, **tabulation**, and **cross-verification** of results. Also used for **KPI** documentation, **trend** aggregation, and **publishing** publicly viewable summary sheets.
+
+- **Tableau:**
+Used for creating visuals to show **seasonal participation** and **age distribution**.
 
 # Data Structure Overview
 
