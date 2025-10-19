@@ -19,7 +19,16 @@
 
 # Project Overview
 
-This analysis is performed on the **Olympic Sports events** and **participants** over a time span of **120 years**. This analysis can reveal the patterns and factors that influence Olympic Sports performance and participation, which can be useful for news reporters, sports enthusiasts, and anyone curious about the Olympics.
+This project explores **athlete participation**, **demographics**, and **medal achievements** across different seasonal Olympic Games from **1996** to **2016**. The analysis was conducted to uncover long-term trends and highlight the key factors shaping global athletic performance. It can be helpful for news reporters, sports enthusiasts, and anyone curious about the Olympics.
+
+The primary objectives were to:
+- Analyze **participation patterns** by **country**, **gender**, and **Olympic season**.
+- Examine **medal distributions** to identify historically dominant **nations** and **sports**.
+- Explore **age** and **BMI** trends among **medalists** and **participants**.
+- Assess **gender representation** and its **evolution** over two decades.
+- Identify **patterns** influencing **performance consistency** and **athletic success**.
+
+The project provides a comprehensive overview of how the Olympic landscape evolved over time, offering insights into **demographic shifts**, **competitive balance**, and the **changing dynamics** of international sports performance.
 
 # Analytics Tools
 To complete this analysis, the following tools were used:
