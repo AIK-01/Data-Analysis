@@ -16,7 +16,7 @@ The analysis covers historical records from **2019 through mid-2025** and provid
 
 ---
 
-## [Project-2 -> Olympic Analysis](https://github.com/AIK-01/Data-Analysis/tree/main/Project-2%20-%3E%20Olympic%20Analysis#project-overview)
+## [Project-2 -> Olympic Events & Performance Analysis (1896-2016)](https://github.com/AIK-01/Data-Analysis/tree/main/Project-2%20-%3E%20Olympic%20Analysis#project-overview)
 #### This project explores **athlete participation**, **demographics**, and **medal achievements** across different seasonal Olympic Games from **1896** to **2016**. The analysis was conducted to uncover long-term trends and highlight the key factors shaping global athletic performance. It can be helpful for news reporters, sports enthusiasts, and anyone curious about the Olympics.
 
 The primary objectives were to:
