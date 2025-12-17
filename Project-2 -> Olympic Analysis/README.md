@@ -636,10 +636,10 @@ A Mixed event in the Olympics refers to a sports event where team participants m
 
 ### Questions  
 
-**1. When were the mixed events first introduced in the Olympics in the Summer and the Winter?**  
-**2. Which country when started and stopped participating in such events?**  
+**1. When were the mixed events first introduced in Olympics in both seasons?**  
+**2. When each of the countries started and stopped participating in such events?**  
 **3. How many Unique Sports are there in this event category?**  
-**4. Who is the best in it?**  
+**4. Who is best in it?**  
 <br>
 <p align='center'>
 <img height=600
