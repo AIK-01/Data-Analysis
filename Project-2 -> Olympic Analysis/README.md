@@ -655,7 +655,7 @@ A Mixed event in the Olympics refers to a sports event where team participants m
 	**Summer Season** : Year **1900**  
 	**Winter Season** : Year **1924**  
 
-**2. Which country when started and stopped participating in such events?**  
+**2. When each of the countries started and stopped participating in such events?**  
 **Ans:**  Just like the **main analysis**, If a country stopped participating before **2016** in the **Summer**	Olympics, then its last participation year is shown in the result. Similarly, if a country stopped participating before **2014** in the winter Olympics, then its last participation year is given in the result. You can view the result set from [here](https://docs.google.com/spreadsheets/d/11Yi40SZ7RgtfLi2rSPGjIawj9JeJ0seEkRmIG3VGmnY/edit?gid=1543691228#gid=1543691228).
 
 **3. How many Unique Sports are there in this event category?**  
